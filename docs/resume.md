@@ -80,11 +80,13 @@ _January 2022 - December 2026 (Expected)_
 
 ---
 
-### Honors & Awards
+### Participations
 
-- **Bronze Medal** - SSL LARC, São Bernardo (2022)
-- **SSL Robocup** - Bordeaux, France (2023)
-- **SSL LARC** - Salvador (2023)
+- **SSL South America Robocup** - Goiânia, Brazil (2024)
+- **OBR Brazil** - Macaé, Brazil (2024)
+- **SSL LARC** - Salvador, Brazil (2023)
+- **SSL International Robocup** - Bordeaux, France (2023)
+- **SSL LARC** - São Bernardo, Brazil(2022)
 - **Judge** - V Global Knowledge Challenge Robotics Olympiad, Brazil (2022)
 
 ---
@@ -93,9 +95,11 @@ _January 2022 - December 2026 (Expected)_
 
 - **Programming Languages**: C, C++, C#, Python, JavaScript
 - **Embedded Systems**: ZephyrRTOS, Embedded Linux, ROS2
-- **PCB & IoT Development**: AWS, Grafana, SQL, Telegraf, InfluxDB
-- **3D Modeling**: CAD and prototyping for robotics
-- **Languages**: Portuguese (Native), English (Professional), German (Limited Working Proficiency)
+- **IoT Development**: AWS, Grafana, SQL, Telegraf, InfluxDB
+- **PCB Development**: Altium, Kicad
+- **Circuit Simulation**: LTspice, Proteus 
+- **3D Modeling**: Solid Works
+- **Languages**: Portuguese (Native), English (B2), German (B1)
 
 ---
 
