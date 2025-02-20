@@ -1,40 +1,93 @@
+import React, { useState, useEffect } from 'react';
 import clsx from 'clsx';
-import Link from '@docusaurus/Link';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
-
-import Heading from '@theme/Heading';
 import styles from './index.module.css';
 
-function HomepageHeader() {
-  const {siteConfig} = useDocusaurusContext();
-  return (
-    <header className={clsx('hero hero--primary', styles.heroBanner)}>
-      <div className="container">
-        <Heading as="h1" className="hero__title">
-          {siteConfig.title}
-        </Heading>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
-        <div className={styles.buttons}>
-          <Link
-            className="button button--secondary button--lg"
-            to="/docs/intro">
-            Docusaurus Tutorial - 5min ⏱️
-          </Link>
-        </div>
-      </div>
-    </header>
-  );
-}
-
 export default function Home() {
-  const {siteConfig} = useDocusaurusContext();
+  const [title, setTitle] = useState('');
+  const [subtitle, setSubtitle] = useState('');
+
+  const fullTitle = 'Frese Tech';
+  const fullSubtitle = 'Powering the Future of Electronics';
+
+  const typingSpeed = 150;
+
+  useEffect(() => {
+    let titleTimeout;
+    let subtitleTimeout;
+
+    titleTimeout = setTimeout(() => {
+      let currentTitle = '';
+      let index = 0;
+      const interval = setInterval(() => {
+        currentTitle += fullTitle[index];
+        setTitle(currentTitle);
+        index += 1;
+        if (index === fullTitle.length) {
+          clearInterval(interval);
+        }
+      }, typingSpeed);
+    }, 500);
+
+    subtitleTimeout = setTimeout(() => {
+      let currentSubtitle = '';
+      let index = 0;
+      const interval = setInterval(() => {
+        currentSubtitle += fullSubtitle[index];
+        setSubtitle(currentSubtitle);
+        index += 1;
+        if (index === fullSubtitle.length) {
+          clearInterval(interval);
+        }
+      }, typingSpeed);
+    }, 1000 + fullTitle.length * typingSpeed);
+
+    return () => {
+      clearTimeout(titleTimeout);
+      clearTimeout(subtitleTimeout);
+    };
+  }, []);
+
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
-      <HomepageHeader />
+      title="Enzo Frese's Portfolio"
+      description="Enzo Frese - Firmware Engineer">
+      <header className={clsx('hero hero--primary', styles.heroBanner)}>
+        <div id="top" className={styles.heroContainer}>
+          <h1 className={clsx(styles.typingText, styles.whiteText)}>{title}</h1>
+          <h2 className={clsx(styles.typingText, styles.whiteText)}>{subtitle}</h2>
+          <p className={styles.whiteText}>
+            Rio de Janeiro, Brazil
+          </p>
+          <div className={styles.socialMediaLinks}>
+            <a href="https://instagram.com/enzofrese" target="_blank" rel="noopener noreferrer">
+              <img
+                src="https://img.shields.io/badge/-Instagram-%23E4405F?style=for-the-badge&logo=instagram&logoColor=white"
+                alt="Instagram"
+              />
+            </a>
+            <a href="mailto:enzo.frese.g@gmail.com" target="_blank" rel="noopener noreferrer">
+              <img
+                src="https://img.shields.io/badge/-Gmail-%23333?style=for-the-badge&logo=gmail&logoColor=white"
+                alt="Gmail"
+              />
+            </a>
+            <a href="https://www.linkedin.com/in/enzo-frese-378420203" target="_blank" rel="noopener noreferrer">
+              <img
+                src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white"
+                alt="LinkedIn"
+              />
+            </a>
+            <a href="https://discord.gg/#EnzoFrese#1793" target="_blank" rel="noopener noreferrer">
+              <img
+                src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white"
+                alt="Discord"
+              />
+            </a>
+          </div>
+        </div>
+      </header>
       <main>
         <HomepageFeatures />
       </main>
