@@ -27,5 +27,5 @@ This layer simplifies the deployment and management of ChirpStack components, al
 - **Role:** Maintainer
 
 ---
-
 *This project showcases my contributions to the embedded systems and IoT community by providing a robust integration layer that streamlines the deployment of LoRaWAN networks.*
+
